@@ -36,5 +36,9 @@ workflows:
   simple_pipeline:
     jobs:
       - build
-      - test
-      - analyze
+      - test:
+          requires:
+            - build
+      - analyze:
+          requires:
+            - test
