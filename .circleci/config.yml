@@ -16,7 +16,6 @@ jobs:
           paths:
             - node_modules
       - run: npm run lint
-      - run: npm run build
   test:
     <<: *default_docker
     steps:
